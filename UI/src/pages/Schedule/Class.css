@@ -1,0 +1,146 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.List {
+    --color: rgba(0, 0, 0);
+    --bgColor: #d4f0fc;
+    display: grid;
+    align-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    color: var(--color);
+    background: var(--bgColor);
+}
+
+.tabList2 {
+    color: #ffffff;
+    font-size: x-large;
+    font-weight: bold;
+    height: 50px;
+    width: 75px;
+    background: #02a9f7;
+    padding: 0;
+    margin: 0;
+    border-bottom-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+}
+
+ol {
+    width: min(50vw, 96%);
+    margin-inline: auto;
+    margin-block: 4vh;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 4vh;
+    column-gap: 2vw;
+
+    list-style: none;
+    /* counter-reset: stepnr; */
+}
+
+a:nth-child(6n + 1) {
+    --accent-color: #b8df4e
+}
+
+a:nth-child(6n + 2) {
+    --accent-color: #FFC949
+}
+
+a:nth-child(6n + 3) {
+    --accent-color: #D20040
+}
+
+a:nth-child(6n + 4) {
+    --accent-color: #F06130
+}
+
+a:nth-child(6n + 5) {
+    --accent-color: #8DECB4
+}
+
+a:nth-child(6n + 6) {
+    --accent-color: #F078C2
+}
+
+a:nth-child(6n + 7) {
+    --accent-color: #F6F5F0
+}
+
+ol a {
+    /* counter-increment: stepnr; */
+    width: 25rem;
+    --borderS: 2rem;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: calc(var(--borderS) + 5rem);
+    position: relative;
+    background-color: #01303f;
+    border-radius: 50%;
+}
+
+ol a::before,
+ol a::after {
+    inset: 0;
+    position: absolute;
+    border-radius: 50%;
+    border: var(--borderS) solid var(--bgColor);
+    line-height: 1.1;
+}
+
+/* ol li::before {
+    content: counter(stepnr);
+    color: var(--accent-color);
+    padding-left: 9rem;
+    font-size: 12rem;
+    font-weight: 700;
+    overflow: hidden;
+} */
+
+ol a::after {
+    content: "";
+    filter: drop-shadow(-0.25rem 0.25rem .0675rem rgba(0, 0, 0, 0.75)) blur(5px);
+}
+
+ol a>* {
+    width: 7.5rem
+}
+
+ol a li {
+    align-items: center;
+    text-align: center;
+}
+
+ol a li .icon {
+    color: var(--accent-color);
+    font-size: 5rem;
+    padding-left: 3rem;
+}
+
+ol a li .title {
+    color: var(--accent-color);
+    font-size: 5rem;
+    font-family: "Lugrasimo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: -1rem;
+}
+
+ol a:hover .icon,
+ol a:hover .title {
+    display: none;
+}
+
+ol a:hover li::before {
+    content: "Click!";
+    color: var(--accent-color);
+    font-size: 6rem;
+    font-family: "Lugrasimo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: -3rem;
+}
